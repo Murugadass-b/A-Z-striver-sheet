@@ -80,6 +80,28 @@ public class Patterns {
         }
     }
 
+    public void diamond(Patterns p,int n){
+        p.pyramid(n);
+        p.invertedPyramid(n);
+    }
+
+    public void halfDiamond(int n){
+        for(int i=0;i<n;i++){
+
+            for(int j=0;j<=n+i-n;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for(int k=n;k>0;k--){
+            for(int s=k-1;s>0;s--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String args[]){
         Patterns p = new Patterns();
 
@@ -90,6 +112,8 @@ public class Patterns {
         // p.invertedRightAngledTriangleStar(5);
         // p.invertedRightAngledTrian1gleNumber(5);
         // p.pyramid(5);
-        p.invertedPyramid(5);
+        // p.invertedPyramid(5);
+        // p.diamond(p,5);
+        p.halfDiamond(5);
     }
 }

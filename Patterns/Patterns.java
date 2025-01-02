@@ -64,6 +64,22 @@ public class Patterns {
         }
     }
 
+    public void invertedPyramid(int n){
+        for(int i=n;i>0;i--){
+            for(int j=0;j<n-i;j++){
+                System.out.print(" ");
+            }
+            for(int k=i;k>0;k--){
+                System.out.print("*");
+            }
+            for(int s=i-1;s>0;s--){
+                System.out.print("*");
+            }
+            // System.out.print('*');
+            System.out.println();
+        }
+    }
+
     public static void main(String args[]){
         Patterns p = new Patterns();
 
@@ -73,6 +89,7 @@ public class Patterns {
         // p.rightAngledTriangleNumbers(5);
         // p.invertedRightAngledTriangleStar(5);
         // p.invertedRightAngledTrian1gleNumber(5);
-        p.pyramid(5);
+        // p.pyramid(5);
+        p.invertedPyramid(5);
     }
 }
